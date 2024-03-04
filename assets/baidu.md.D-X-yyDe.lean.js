@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as d,a4 as a}from"./chunks/framework.JW47PfsW.js";const g=JSON.parse('{"title":"大华视频接入","description":"","frontmatter":{},"headers":[],"relativePath":"baidu.md","filePath":"baidu.md"}'),r={name:"baidu.md"},i=a("",51),o=[i];function l(h,n,c,s,u,m){return d(),e("div",null,o)}const b=t(r,[["render",l]]);export{g as __pageData,b as default};
