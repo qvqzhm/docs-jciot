@@ -39,12 +39,11 @@ jobs:
         with:
           node-version: 18
 #          cache: pnpm # 或 pnpm / yarn
+      - run: npm install -g pnpm # 全局安装 pnpm
+      - run: pnpm install --frozen-lockfile
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
-      - name: Install pnpm
-        run: npm install -g pnpm # 全局安装 pnpm
 
       - name: Install dependencies
         run: pnpm install # 或 pnpm install / yarn install / bun install
