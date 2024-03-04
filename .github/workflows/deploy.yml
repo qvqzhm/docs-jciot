@@ -39,7 +39,7 @@ jobs:
         with:
           node-version: 18.19.0
 #          cache: pnpm # 或 pnpm / yarn
-      - run: npm install -g pnpm@8.15.4 # 全局安装 pnpm
+#      - run: npm install -g pnpm@8.15.4 # 全局安装 pnpm
 #      - run: pnpm install --frozen-lockfile
 
 #      - name: Setup Pages
