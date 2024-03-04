@@ -4,6 +4,7 @@ import { nav } from "./relConfig";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/qvqzhm/',
   title: "docs",
   description: "A VitePress Site",
   themeConfig: {
