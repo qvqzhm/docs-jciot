@@ -1,6 +1,6 @@
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 #
-name: deploy
+name: Deploy
 
 on:
   # 在针对 `main` 分支的推送上运行。如果你
@@ -51,7 +51,7 @@ jobs:
       - name: Build
         run: pnpm docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
 
-      - name: deploy
+      - name: Deploy
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
@@ -59,14 +59,14 @@ jobs:
           publish_dir: docs/.vitepress/dist # 指定该文件夹中的 dist
 
   # 部署工作
-#  deploy:
-#    environment:
-#      name: github-pages
-#      url: ${{ steps.deployment.outputs.page_url }}
-#    needs: build
-#    runs-on: ubuntu-latest
-#    name: Deploy
-#    steps:
-#      - name: Deploy to GitHub Pages
-#        id: deployment
-#        uses: actions/deploy-pages@v4
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
